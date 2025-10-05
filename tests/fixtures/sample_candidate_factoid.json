@@ -1,0 +1,12 @@
+{
+  "factoid_id": "factoid-0001",
+  "factoid_text": "John joined Acme as CTO in 2019.",
+  "subject_raw": "John",
+  "object_raw": "Acme",
+  "predicate_candidates": [{"predicate_cid":"cid:pred:joined:v1","score":0.98}],
+  "confidence": 0.98,
+  "modality": "assertion",
+  "time_scope": null,
+  "provenance": {"msg_cid":"bafymessage","chunk_id":"00000000-0000-0000-0000-000000000001"},
+  "normalizations": {}
+}

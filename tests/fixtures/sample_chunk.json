@@ -1,0 +1,9 @@
+{
+  "chunk_id": "00000000-0000-0000-0000-000000000001",
+  "msg_cid": "bafychunkexample",
+  "text": "John joined Acme as CTO in 2019.",
+  "language": "en",
+  "char_range": [0, 30],
+  "chunk_hash": "deadbeef",
+  "overlap": false
+}

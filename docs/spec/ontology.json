@@ -1,0 +1,9 @@
+{
+  "predicates": [
+    {"cid":"cid:pred:joined:v1","label":"joined"},
+    {"cid":"cid:pred:left:v1","label":"left"},
+    {"cid":"cid:pred:hired:v1","label":"hired"},
+    {"cid":"cid:pred:located_at:v1","label":"located at"},
+    {"cid":"cid:pred:works_as:v1","label":"works as"}
+  ]
+}

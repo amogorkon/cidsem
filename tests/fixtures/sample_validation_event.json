@@ -1,0 +1,10 @@
+{
+  "event_id": "ev-1",
+  "factoid_id": "f-1",
+  "responder_id": "r-1",
+  "response": "confirmed",
+  "timestamp": "2025-09-27T12:00:00Z",
+  "bot_id": "bot-1",
+  "prompt_hash": "ph-123",
+  "model_version": "gpt-test-0"
+}
