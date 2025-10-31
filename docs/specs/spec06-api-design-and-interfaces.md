@@ -1,3 +1,4 @@
+```markdown
 # API design & interfaces (summary)
 
 All service-to-service communications are JSON-over-HTTP (FastAPI) for control endpoints and optional gRPC for high-throughput lanes. Internal high-throughput lanes may use msgpack over binary streams.
@@ -24,7 +25,9 @@ GET /validation_prompt/{factoid_cid}
 
 POST /validation_event
 - Body: `ValidationEvent` (see schema). Request SHOULD include `Idempotency-Key` for client retries.
-- Side-effects: append ValidationEvent to WAL, recompute validation decision (consensus, TTL, weights). If the result is `confirm` -> extract (subject: E, predicate: E, object: E) triples from confirmed factoid, serialize as msgpack with 256-bit E fields (high, high_mid, low_mid, low), and send via ZMQ batch_insert to cidstore (tcp://cidstore:5555 for REQ/REP or tcp://cidstore:5557 for PUSH/PULL). If `reject` or `expire` -> push `BacklogItem` to backlog queue.
+- Side-effects: append ValidationEvent to WAL, recompute validation decision (consensus, TTL, weights). If the result is `confirm` -> extract (subject: E, predicate: E, object: E) triples from confirmed factoid, serialize as msgpack with 256-bit E fields (high, high_mid, low_mid, low), and send via ZMQ batch_insert to cidstore with optimized batching (32-1024 items) using REQ/REP or PUSH/PULL patterns. If `reject` or `expire` -> push `BacklogItem` to backlog queue.
+- Performance: Auto-tune batch size based on observed latency; target <100μs P99 for validation processing.
+- Error Recovery: Retry failed cidstore inserts with exponential backoff; ValidationEvents are idempotent and safe to replay.
 
 GET /backlog/claim
 - Workers call this to pop/claim backlog items for Dreaming. Supports claim/ack semantics and visibility timeouts.
@@ -40,9 +43,21 @@ Predicate Registry API
 - POST /predicates/{predicate_uri}/migrate — run migration script for existing triples.
 
 POST /cidstore/batch_insert
-- Body: list of `{"key": {"high": uint64, "low": uint64}, "value": {"high": uint64, "low": uint64}}`.
-- Response: `201 { results: [{status:"ok"|"error", message:""}] }`
-- Semantics: Maps to cidstore.insert(key: E, value: E) calls; idempotent; WAL-backed by cidstore internally.
+- **DEPRECATED**: This REST endpoint is for legacy compatibility only. Use ZMQ data plane for production.
+- Body: msgpack-encoded array of `{"key": {"high": uint64, "high_mid": uint64, "low_mid": uint64, "low": uint64}, "value": {"high": uint64, "high_mid": uint64, "low_mid": uint64, "low": uint64}}`.
+- Response: `201 { results: [{status:"ok"|"error", message:""}], performance: {latency_ms: float, throughput_ops_sec: int} }`
+- Semantics: Maps to cidstore insert operations; idempotent; WAL-backed by cidstore internally.
+- **Recommended**: Use ZMQ batch_insert instead for production workloads.
+
+CIDStore ZMQ Integration (Recommended)
+- Primary: ZMQ REQ/REP on tcp://cidstore:5555 with msgpack batch_insert messages
+  - Request: `{"command": "batch_insert", "triples": [{"s": "E(h,hm,lm,l)", "p": "E(...)", "o": "E(...)"}]}`
+  - Response: `{"status": "ok", "inserted": <count>, "version": "1.0"}`
+- Production: ZMQ PUSH/PULL on tcp://cidstore:5557 for fire-and-forget high throughput
+  - Message: `{"op_code": "BATCH_INSERT", "entries": [{"key": "E(...)", "value": "E(...)"}]}`
+- Performance: Target >1M ops/sec (batched), adaptive batch sizing 32-1024 items, <50μs average latency.
+- Error Recovery: Exponential backoff retry on network errors, partial failure re-send of failed items only.
+- See: docs/specs/spec11-cidstore-integration.md for complete integration guide
 
 POST /validation_event
 - Body: `ValidationEvent` (see schema). Request SHOULD include `Idempotency-Key` for client retries when user action is re-sent by the client.
@@ -78,8 +93,10 @@ Error model
 - 4xx: client validation errors (schema mismatch, missing fields) — Response `400` with JSON `{ "code": "invalid_payload", "message": "Schema validation failed", "details": [{"field":"provenance.msg_cid","error":"required"}, ...] }`.
 - 409: conflict due to idempotency (duplicate `Idempotency-Key` with non-matching payload) — `{ "code":"idempotency_conflict", "message":"Idempotency key conflict" }`.
 - 422: semantic rejection (payload valid but violates business rules) — `{ "code":"semantic_rejection", "message":"predicate not allowed for this predicate_cid", "details": {...} }`.
+- 502: cidstore integration errors — `{ "code":"cidstore_error", "message":"cidstore insertion failed", "cidstore_details": {...}, "retry_suggested": true }`.
+- 503: performance degradation — `{ "code":"performance_limit", "message":"throughput limit exceeded", "current_ops_sec": 800000, "target_ops_sec": 1000000, "retry_after_ms": 100 }`.
 - 5xx: server errors — `{ "code":"internal_error", "message":"something went wrong", "request_id":"<uuid>", "trace_id":"<trace>" }`.
-- All error responses MUST be JSON and include `request_id` (server-generated) for tracing.
+- All error responses MUST be JSON and include `request_id` (server-generated) for tracing and performance metrics.
 
 Security
 - All endpoints require authentication and fine-grained authorization for moderator-level actions (predicate approve, moderator override).

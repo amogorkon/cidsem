@@ -40,10 +40,34 @@ async def post_candidate_factoid(request: Request):
             mapped = map_predicate(pred)
             if mapped:
                 p = mapped["predicate"]
+                # The ontology may use different field names for the predicate id
+                # older versions used 'cid', newer spec uses an 'entity' dict with
+                # high/low fields. Normalize to a string predicate_cid for the
+                # CandidateFactoid schema (which expects a string).
+                # The ontology entry may store the fully-qualified id in 'cid'
+                # and the human label in either 'label' or 'content'. Normalize
+                # to a string predicate_cid and a human 'label' string.
+                pcid = p.get("cid")
+                if pcid is None and isinstance(p.get("entity"), dict):
+                    try:
+                        pcid = json.dumps(p.get("entity"), sort_keys=True)
+                    except Exception:
+                        pcid = str(p.get("entity"))
+
+                # ensure predicate_cid is a string (schemas expect strings)
+                if not isinstance(pcid, str):
+                    pcid = str(pcid)
+
+                human_label = p.get("label") or p.get("content") or ""
+                # If content is fully-qualified like kind:ns:label, extract human label
+                if human_label and ":" in human_label:
+                    parts = human_label.split(":", 2)
+                    human_label = parts[2] if len(parts) >= 3 else human_label
+
                 inferred.append({
-                    "predicate_cid": p.get("cid"),
+                    "predicate_cid": pcid,
                     "score": mapped.get("score", 1.0),
-                    "label": p.get("label"),
+                    "label": human_label,
                 })
         if inferred:
             body["predicate_candidates"] = inferred

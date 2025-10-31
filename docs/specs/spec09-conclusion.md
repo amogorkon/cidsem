@@ -58,7 +58,7 @@ graph TB
 ---
 
 This condensed architecture delivers unprecedented performance while maintaining pure content addressability, enabling scalable, distributed reasoning at the speed of structured data.
-
+ 
 ## Pilot next steps & cidstore integration
 
 This repo's `spec00`..`spec08` are the canonical implementation-spec for cidstore integration.

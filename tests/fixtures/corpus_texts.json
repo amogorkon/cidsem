@@ -7,12 +7,12 @@
         {
           "id": "X001F01",
           "text": "john joined acme",
-          "cid": "59936e6625e4250c69dd428a0d757696"
+          "predicate": "R:sys:joined"
         },
         {
           "id": "X001F02",
           "text": "X001F01 happened 2019",
-          "cid": "19f5fa5f30ff0e6711f4aa99f9fe5538"
+          "predicate": ""
         }
       ]
     },
@@ -23,7 +23,7 @@
         {
           "id": "X002F01",
           "text": "she hired openwidgets corp",
-          "cid": "2d6776c072059d8f9e512ae8e763cc3a"
+          "predicate": ""
         }
       ]
     },
@@ -34,7 +34,7 @@
         {
           "id": "X003F01",
           "text": "maria left the company",
-          "cid": "adf8b49d0f31084a7d64483b7d2007e5"
+          "predicate": "R:sys:left"
         }
       ]
     },
@@ -50,7 +50,7 @@
         {
           "id": "X005F01",
           "text": "anna joined the startup",
-          "cid": "6a54f9e4a5773857cc37ec3fdd5efc4e"
+          "predicate": "R:sys:joined"
         }
       ]
     },
@@ -61,7 +61,7 @@
         {
           "id": "X006F01",
           "text": "alice joined betacorp",
-          "cid": "c44506db0b15c91ac82e76c3140c34c2"
+          "predicate": "R:sys:joined"
         }
       ]
     },
@@ -87,7 +87,7 @@
         {
           "id": "X010F01",
           "text": "he works as a contractor",
-          "cid": "916c84f68d666af421fc2f575df932bc"
+          "predicate": "R:sys:worksAt"
         }
       ]
     }

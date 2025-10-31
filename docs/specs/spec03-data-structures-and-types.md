@@ -5,9 +5,9 @@
 ## 2.0 Core Principles and Key Components
 
 ### Pure Content Addressability
-- All entities (data, metadata, schemas) are content-addressed via 128-bit entity IDs (E format)
-- E entities have high/low 64-bit fields compatible with cidstore.E class
-- Deterministic E generation through canonicalization (SHA3 or UUID5-based)
+- All entities (data, metadata, schemas) are content-addressed via 256-bit entity IDs (E format)
+- E entities have four 64-bit fields compatible with cidstore.E class: high, high_mid, low_mid, low
+- Uses SHA-256 for deterministic E generation (JACK hash format: "E(h,hm,lm,l)")
 - No distinction between data, metadata, or schemas—all are E entities
 
 ### Schema-First Architecture
@@ -31,11 +31,18 @@
 
 ## 2.1 Content Addressing Model
 
-All data in CIDSEM is mapped to a 128-bit Entity identifier (E), computed as a SHA3 hash over its canonical form, compatible with cidstore.E format. This ensures:
+All data in CIDSEM is mapped to a 256-bit Entity identifier (E), computed as a SHA-256 hash over its canonical form, compatible with cidstore.E format. This ensures:
 - **Deterministic addressing**: Identical content always produces the same E entity
 - **Content verification**: E entities serve as integrity checksums
 - **Deduplication**: Identical content is stored only once
 - **cidstore compatibility**: E entities can be directly used as keys/values in cidstore
+
+### E Entity Representation
+CIDs are represented in multiple formats:
+- **String format**: `"E(h,hm,lm,l)"` where h, hm, lm, l are four 64-bit unsigned integers
+- **List/Tuple**: `[high, high_mid, low_mid, low]` as a 4-element array
+- **JACK hexdigest**: `"j:abcd..."` string (converted to E numeric form by cidstore)
+- **Struct format**: `{"high": uint64, "high_mid": uint64, "low_mid": uint64, "low": uint64}`
 
 ### Canonical Forms
 - **Schemas**: Canonicalized JSON (following RFC 8785)
@@ -53,25 +60,28 @@ All cidsem output must be formatted as triples compatible with cidstore insertio
 ```
 
 ### E Entity Format
-- **E class**: 128-bit entity with `high` and `low` 64-bit fields
-- **Creation**: `E.from_str(string_value)` using UUID5 hashing
-- **Serialization**: `{"high": e.high, "low": e.low}` for JSON/msgpack
-- **cidstore integration**: Direct use as keys/values in `cidstore.insert(key, value)`
+- **E class**: 256-bit entity with four 64-bit fields: `high`, `high_mid`, `low_mid`, `low`
+- **Creation**: Uses SHA-256 hashing over canonical content
+- **Serialization**: `{"high": uint64, "high_mid": uint64, "low_mid": uint64, "low": uint64}` for msgpack/JSON
+- **String format**: `"E(high,high_mid,low_mid,low)"` for human-readable representation
+- **cidstore integration**: Direct use in ZMQ/msgpack messages for batch operations
 
 ### Context-to-Triple Examples
 ```python
 # Input context: {"user": "alice", "action": "login", "timestamp": "2024-06-01T12:00:00Z"}
-# Output triples:
-(
-  E.from_str("alice"),                    # subject
-  E.from_str("performed"),                # predicate
-  E.from_str("login")                     # object
-),
-(
-  E.from_str("alice"),                    # subject
-  E.from_str("timestamp"),                # predicate
-  E.from_str("2024-06-01T12:00:00Z")      # object
-)
+# Output triples (256-bit E format):
+triples = [
+  {
+    's': 'E(12345,67890,11121,31415)',      # alice (subject)
+    'p': 'E(23456,78901,21222,41516)',      # performed (predicate)
+    'o': 'E(34567,89012,31323,51617)'       # login (object)
+  },
+  {
+    's': 'E(12345,67890,11121,31415)',      # alice (subject)
+    'p': 'E(45678,90123,41424,61718)',      # timestamp (predicate)
+    'o': 'E(56789,01234,51525,71819)'       # 2024-06-01T12:00:00Z (object)
+  }
+]
 ```
 
 ```markdown
@@ -156,12 +166,12 @@ ValidationEvent
 }
 ```
 
-TripleRecord (cidstore-compatible)
+TripleRecord (cidstore-compatible, 256-bit format)
 ```
 {
-  "subject": {"high": 12345678901234567890, "low": 9876543210987654321},
-  "predicate": {"high": 11111111111111111111, "low": 2222222222222222222},
-  "object": {"high": 33333333333333333333, "low": 4444444444444444444},
+  "subject": {"high": 12345, "high_mid": 67890, "low_mid": 11121, "low": 31415},
+  "predicate": {"high": 23456, "high_mid": 78901, "low_mid": 21222, "low": 41516},
+  "object": {"high": 34567, "high_mid": 89012, "low_mid": 31323, "low": 51617},
   "confidence": 0.0-1.0,
   "provenance": {"factoid_cid":"...","msg_cid":"...","extracted_by":"model:v1|rules:v1"},
   "schema_version": "predicate:v1",

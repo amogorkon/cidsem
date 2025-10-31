@@ -12,7 +12,7 @@
 🧠 Schema introspection and inference (e.g., schema similarity).
 📦 WASM-dispatch modules for portable, safe execution.
 🔄 Versioning and upgrade semantics between schema generations.
-
+ 
 ## Pilot plan & next steps
 
 The following actions should be completed during an initial pilot (small scope) to validate the proposed architecture and the Validation Layer.

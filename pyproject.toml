@@ -6,6 +6,8 @@ description = "CIDSEM pilot components and spec artifacts"
 [tool.poetry.dependencies]
 python = "^3.10"
 jsonschema = "^4.0.0"
+zvic = "2025.43.0"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0"
