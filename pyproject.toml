@@ -4,9 +4,10 @@ version = "0.1.0"
 description = "CIDSEM pilot components and spec artifacts"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.14"
 jsonschema = "^4.0.0"
 zvic = "2025.43.0"
+redis = "^4.6.0"
 
 
 [tool.poetry.dev-dependencies]

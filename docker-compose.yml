@@ -1,0 +1,51 @@
+version: '3.9'
+
+services:
+  cidstore:
+    build:
+      context: .
+      dockerfile: Dockerfile.cidstore
+    image: cidstore:latest
+    container_name: cidstore
+    ports:
+      - "8000:8000"   # REST API
+      - "5555:5555"   # ZMQ REQ/REP (request-response)
+      - "5556:5556"   # ZMQ PUSH/PULL (mutations/writes)
+      - "5557:5557"   # ZMQ PUB/SUB (notifications)
+    environment:
+      - CIDSTORE_PORT=8000
+      - CIDSTORE_ZMQ_REQREP_PORT=5555
+      - CIDSTORE_ZMQ_PUSH_PORT=5556
+      - CIDSTORE_ZMQ_PUB_PORT=5557
+      - CIDSTORE_HDF5_PATH=/data/cidstore.h5
+      - PYTHONUNBUFFERED=1
+      - PYTHON_JIT=1
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    volumes:
+      - cidstore-data:/data
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  cidstore-data:
+
+networks:
+  app-network:
+    driver: bridge

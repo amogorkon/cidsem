@@ -14,6 +14,13 @@ import json
 import os
 import time
 from typing import Any, Dict, List, Optional
+import json as _json
+import os as _os
+
+# Optional runtime Redis integration. We import redis lazily in the
+# CidstoreClient initializer so that the package remains importable even if
+# redis-py is not installed in some environments (tests, CI, etc.).
+
 
 from zvic import constrain_this_module
 
@@ -147,6 +154,25 @@ class CidstoreClient:
         self.batch_size = 128  # Adaptive batch size, starts at 128
         self.max_batch_size = 1024
         self.min_batch_size = 32
+        # Redis integration (optional): if CIDSEM_USE_REDIS=1 then attempt to
+        # connect to Redis using REDIS_HOST and REDIS_PORT environment vars.
+        self.redis = None
+        self.redis_enabled = _os.getenv("CIDSEM_USE_REDIS", "1") == "1"
+        if self.redis_enabled:
+            try:
+                # Import lazily so importing the module doesn't require redis
+                import redis as _redis_pkg
+
+                redis_host = _os.getenv("REDIS_HOST", "redis")
+                redis_port = int(_os.getenv("REDIS_PORT", "6379"))
+                # Use binary responses to store JSON bytes directly
+                self.redis = _redis_pkg.Redis(host=redis_host, port=redis_port)
+                # quick health check
+                self.redis.ping()
+            except Exception as exc:  # pragma: no cover - runtime environmental
+                print(f"Redis disabled/unavailable: {exc}")
+                self.redis = None
+                self.redis_enabled = False
 
     def insert_triple(self, triple: TripleRecord) -> bool:
         """Insert a single triple with compound keys for fast queries."""
@@ -166,6 +192,18 @@ class CidstoreClient:
             # Reverse lookup: object+predicate -> subject
             reverse_key = create_reverse_key(triple.predicate, triple.object)
             self.cidstore.insert(reverse_key, triple.subject)
+
+            # If redis integration is enabled and triple has a content hash, store
+            # the mapping (hash -> serialized triple content) in Redis. This is
+            # fire-and-forget: failures here should not break cidstore insertion.
+            try:
+                if self.redis is not None:
+                    hexdig = triple.provenance.get("triple_hash")
+                    if hexdig:
+                        # store JSON bytes; use pipeline for single set is fine
+                        self.redis.set(hexdig, _json.dumps(triple.to_dict()).encode("utf-8"))
+            except Exception as _redis_exc:  # pragma: no cover - runtime
+                print(f"Warning: failed to write to Redis: {_redis_exc}")
 
             return True
         except Exception as e:
@@ -266,7 +304,22 @@ class CidstoreClient:
             except Exception as e:
                 failures.append({"batch_start": i, "error": str(e)})
 
-        return {"success_count": success_count, "failures": failures}
+        result = {"success_count": success_count, "failures": failures}
+
+        # If all batches succeeded and Redis is available, push (hash->content)
+        # mappings for all triples that have a `triple_hash` in provenance.
+        if not failures and self.redis is not None:
+            try:
+                pipeline = self.redis.pipeline()
+                for t in triples:
+                    hexdig = t.provenance.get("triple_hash")
+                    if hexdig:
+                        pipeline.set(hexdig, _json.dumps(t.to_dict()).encode("utf-8"))
+                pipeline.execute()
+            except Exception as _redis_exc:  # pragma: no cover - runtime
+                print(f"Warning: failed to write batch to Redis: {_redis_exc}")
+
+        return result
 
     def query_by_subject_predicate(self, subject: E, predicate: E) -> List[E]:
         """Find objects for a given subject+predicate."""
