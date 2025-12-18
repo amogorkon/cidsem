@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/schemas/chunk.v1.json",
+  "title": "Chunk v1",
+  "type": "object",
+  "required": ["chunk_id","msg_cid","text"],
+  "properties": {
+    "chunk_id": {"type":"string","format":"uuid"},
+    "msg_cid": {"type":"string"},
+    "text": {"type":"string"},
+    "language": {"type":"string"},
+    "char_range": {"type":"array","items":{"type":"integer"},"minItems":2,"maxItems":2},
+    "chunk_hash": {"type":"string"},
+    "overlap": {"type":"boolean"}
+  },
+  "additionalProperties": false
+}

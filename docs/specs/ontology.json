@@ -1,0 +1,5044 @@
+{
+  "$schema": "ontology/v1",
+  "version": "1.0.0",
+  "generated_at": "2025-12-15T00:00:00Z",
+  "namespace": "R",
+  "predicates": [
+    {
+      "id": 178,
+      "kind": "R",
+      "namespace": "social",
+      "label": "childOf",
+      "cid": "sha256:3459d54d02cb6f5238f6fc2b95e43bed018fd24a71c3ff8de54b8f6d9369dc5a",
+      "description": "child of parent (biological, adoptive, etc.)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:posted",
+        "short_form": "posted",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 16,
+      "kind": "R",
+      "namespace": "social",
+      "label": "follows",
+      "cid": "sha256:75291a6a241a0779d9a6f522ee9ce8f42dc7b73c9b1f662ec8a8ed96076dcbb0",
+      "description": "social graph follows relationship",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:mentions",
+        "short_form": "mentions",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 3,
+      "kind": "R",
+      "namespace": "social",
+      "label": "states",
+      "cid": "sha256:3c8d77183d09e9ad84640b25a71f70f97133dfa0e8a59f3ec7862fa294cce3b3",
+      "description": "assertive factual claim (S states O)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:states",
+        "short_form": "states",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 4,
+      "kind": "R",
+      "namespace": "social",
+      "label": "believes",
+      "cid": "sha256:f9bf76d4e19333b1688b0c2136db07228b81d72e6fc5e274a5d11ac0e1fcea0f",
+      "description": "expresses belief/opinion about O",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:believes",
+        "short_form": "believes",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 5,
+      "kind": "R",
+      "namespace": "social",
+      "label": "asksAbout",
+      "cid": "sha256:0af4758a05da5bb081f05ccbb78028dc90236865aaa0a02ef81cfb4d7f160b93",
+      "description": "question/asks about O",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:asksAbout",
+        "short_form": "asksAbout",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 106,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "causes",
+      "cid": "sha256:24a6582c98c3cdb93c3bd6d978af6e9ac90ad757feff896150c69d1e3473b4d5",
+      "description": "causes event",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:cites",
+        "short_form": "cites",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 7,
+      "kind": "R",
+      "namespace": "social",
+      "label": "joined",
+      "cid": "sha256:4a0614932d00f1b3f283beb8a95d064774ff8d7995a50cb6d128b35af6d49106",
+      "description": "joined/started membership/role",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:joined",
+        "short_form": "joined",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 8,
+      "kind": "R",
+      "namespace": "social",
+      "label": "left",
+      "cid": "sha256:c90c64fcbc5833c159ea0c4fc061ddc949dfab1472e587f5d8e027519a3ac22a",
+      "description": "left/ended membership/role",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:left",
+        "short_form": "left",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 9,
+      "kind": "R",
+      "namespace": "social",
+      "label": "worksAt",
+      "cid": "sha256:f34856e502d8e7c8952d502eb580ee011540f283c2c134041ef70cf3aa9e59df",
+      "description": "employment relationship",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:worksAt",
+        "short_form": "worksAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 10,
+      "kind": "R",
+      "namespace": "social",
+      "label": "livesIn",
+      "cid": "sha256:6566205efd8a8bd4a1879de41e8491c7f8f92f2b608564114165537efc3ded42",
+      "description": "location/habitation",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:livesIn",
+        "short_form": "livesIn",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 11,
+      "kind": "R",
+      "namespace": "social",
+      "label": "hasEvent",
+      "cid": "sha256:f1bcf22a48f258a0d5ed9be65edc0adb5039e7da71f1c1ea75755e464d84fd51",
+      "description": "event mention (time-scoped)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:hasEvent",
+        "short_form": "hasEvent",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 12,
+      "kind": "R",
+      "namespace": "social",
+      "label": "madeClaimAbout",
+      "cid": "sha256:99884171690ad923c7aef47c8b78b7f1b90b0f37e869212393fb1cd2a6c407dc",
+      "description": "general claim relation (catch-all)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:madeClaimAbout",
+        "short_form": "madeClaimAbout",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 13,
+      "kind": "R",
+      "namespace": "social",
+      "label": "disagreesWith",
+      "cid": "sha256:ab56d875ed70f737ccea8438355978ca5c0e05de9407fe7bfc108bcfd3b6c61c",
+      "description": "contradiction/negation relation",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:disagreesWith",
+        "short_form": "disagreesWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 14,
+      "kind": "R",
+      "namespace": "social",
+      "label": "supports",
+      "cid": "sha256:7c87d2b106d9c116484ee7f22d63ad5950e275ba4d076bd570ec48b817bd7009",
+      "description": "supports/endorses another claim or actor",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:supports",
+        "short_form": "supports",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 15,
+      "kind": "R",
+      "namespace": "social",
+      "label": "securityAlert",
+      "cid": "sha256:f28e21c78e13ab3094bdfa5dee025ce6fa5f688ac15b5267476081f1d499579a",
+      "description": "flagged content for security/moderation",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:securityAlert",
+        "short_form": "securityAlert",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 16,
+      "kind": "R",
+      "namespace": "social",
+      "label": "follows",
+      "cid": "sha256:280a593165e128043b85572b835fd696b6affe14eadacfee8590f31d21184366",
+      "description": "social graph follows",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:follows",
+        "short_form": "follows",
+        "aliases": [],
+        "notes": "inverseOf: R:social:followedBy (explicit inverse removed for optimization)",
+        "inverse_label": "R:social:followedBy"
+      }
+    },
+    {
+      "id": 18,
+      "kind": "R",
+      "namespace": "social",
+      "label": "likes",
+      "cid": "sha256:01b9dd3aec7ce5d7667c99add4f0bfd3c234b111047d847b87fda3b8955b8f57",
+      "description": "lightweight positive interaction",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:likes",
+        "short_form": "likes",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 19,
+      "kind": "R",
+      "namespace": "social",
+      "label": "reactsTo",
+      "cid": "sha256:416b49eca95d1fa2fb4f439e470fdbaef7dece43cbd966872574222ef0da9876",
+      "description": "emoji/reaction engagement",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:reactsTo",
+        "short_form": "reactsTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 20,
+      "kind": "R",
+      "namespace": "social",
+      "label": "bookmarks",
+      "cid": "sha256:50015b51eba731af67c93f9e197aeb205531d441c78ca64f0fe99cf96092b06f",
+      "description": "saves message/entity for later",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:bookmarks",
+        "short_form": "bookmarks",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 21,
+      "kind": "R",
+      "namespace": "social",
+      "label": "blocks",
+      "cid": "sha256:df8fd5924eaf379aa0c472a05aaa97effcbbd137a1dbc3d1bb845a6602401cb8",
+      "description": "prevents another user from interacting",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:blocks",
+        "short_form": "blocks",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 22,
+      "kind": "R",
+      "namespace": "social",
+      "label": "mutes",
+      "cid": "sha256:03ee05d4585d8308c14cd62049c99bf3dddd4dd98ae08257ef879e113bfe2afd",
+      "description": "hides content from another user",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:mutes",
+        "short_form": "mutes",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 23,
+      "kind": "R",
+      "namespace": "social",
+      "label": "relationshipType",
+      "cid": "sha256:e0f6a10efd1b011393e1aa8edfdb53124f525bafc4a9398d595337a52926f43a",
+      "description": "Type of relationship (adoptive, biological, etc.)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:relationshipType",
+        "short_form": "relationshipType",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 24,
+      "kind": "R",
+      "namespace": "social",
+      "label": "contradicts",
+      "cid": "sha256:bc6527476700659a8c3104e183c6bf5814ea29901cef682389f4b960ccb58935",
+      "description": "Information contradicts another assertion",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:contradicts",
+        "short_form": "contradicts",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 25,
+      "kind": "R",
+      "namespace": "identity",
+      "label": "owns",
+      "cid": "sha256:8ee92fd41464931029db80e33e1b503dcb30fea2005f021e2408ef7f03a4fda1",
+      "description": "entity owns an asset",
+      "category": "Identity & Ownership",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:identity:owns",
+        "short_form": "owns",
+        "aliases": [],
+        "notes": "inverseOf: R:identity:ownerOf (explicit inverse removed for optimization)",
+        "inverse_label": "R:identity:ownerOf"
+      }
+    },
+    {
+      "id": 27,
+      "kind": "R",
+      "namespace": "identity",
+      "label": "identifiedBy",
+      "cid": "sha256:b00b5d95aedcf31967f1ef2586c31a15b05f024505ffffa3bc37547173217e82",
+      "description": "entity mapped to identifier (email, DID, UUID)",
+      "category": "Identity & Ownership",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:identity:identifiedBy",
+        "short_form": "identifiedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 28,
+      "kind": "R",
+      "namespace": "identity",
+      "label": "hasIdentifier",
+      "cid": "sha256:5924afdd6aefc353484a083261d2f891009c887b1a316a1e5abb7a3c96710ec0",
+      "description": "general link to identifiers",
+      "category": "Identity & Ownership",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:identity:hasIdentifier",
+        "short_form": "hasIdentifier",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 29,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "createdBy",
+      "cid": "sha256:45caa119c3c2e1fa73eb07f4368efdc45638c2cffdd3b39980be70b0407fea4b",
+      "description": "created by actor",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:createdBy",
+        "short_form": "createdBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 30,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "createdAt",
+      "cid": "sha256:20d05e942d12165dc74975d0585ed03937ded66d3db1408660bf7e87c65844dc",
+      "description": "creation timestamp",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:createdAt",
+        "short_form": "createdAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 31,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "modifiedBy",
+      "cid": "sha256:961f749919e584d5492d63d3ec71e76ecb31fb09682433726b23d2d8794842b9",
+      "description": "modified by actor",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:modifiedBy",
+        "short_form": "modifiedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 32,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "modifiedAt",
+      "cid": "sha256:05a8cf32c0437d785c3253e0734d1919ee71155c8a76d2b60401fe25fce50876",
+      "description": "modification timestamp",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:modifiedAt",
+        "short_form": "modifiedAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 33,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "deletedAt",
+      "cid": "sha256:6a6dd37321f37e8d027bd4b532aded5b3976c1248afa91388175a116fa9524ba",
+      "description": "deletion timestamp",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:deletedAt",
+        "short_form": "deletedAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 34,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "archived",
+      "cid": "sha256:892acbe055294f06a7b6997c18d7c14aaf8a3bcf94c2a14633ce3687b7509183",
+      "description": "marked as archived",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:archived",
+        "short_form": "archived",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 35,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "revoked",
+      "cid": "sha256:c775d05051d6e1e8b07df3cb86a04805e29f49f90e419a21e25ae48edd189791",
+      "description": "revoked access/permission",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:revoked",
+        "short_form": "revoked",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 36,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "deprecated",
+      "cid": "sha256:7861d5f2f2e767cf1fe9c3db5a4433987ed893f603caf3ef0acf5bb617e4b6d0",
+      "description": "marked as deprecated",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:deprecated",
+        "short_form": "deprecated",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 37,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "authorOf",
+      "cid": "sha256:d9a8dfb6542080971b82c3c8c698b0bff9458d53d6b0356d5f0b7927a9f53421",
+      "description": "authored content",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:authorOf",
+        "short_form": "authorOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 38,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "editorOf",
+      "cid": "sha256:a3821a353634b76b9386b238846cf9bce5b13a3d1e0c0d8bf283a11ee77d086e",
+      "description": "edited content",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:editorOf",
+        "short_form": "editorOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 39,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "curatorOf",
+      "cid": "sha256:6de78ae46ca0583dd31623e59730514b9ea54838ea426d1093b2a0e9e63b8c9d",
+      "description": "curated content",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:curatorOf",
+        "short_form": "curatorOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 40,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "signedBy",
+      "cid": "sha256:ce5d55c8d9906c6c1aefa46cf16141acfc9dc1dfb6a78f1dab85e18626c116d1",
+      "description": "cryptographic signature reference",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:signedBy",
+        "short_form": "signedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 41,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "provenanceChain",
+      "cid": "sha256:b889c6988c4d9888a714fa12b8873e69121e61773fe2c4e5157a4299e57c0c87",
+      "description": "multi-step provenance",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:provenanceChain",
+        "short_form": "provenanceChain",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 42,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "derivedVia",
+      "cid": "sha256:e5764fa3407b678460b5d4568219e7faada1c731d282890a91f4efbd180e0f76",
+      "description": "derived via transformation",
+      "category": "Lifecycle & Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:derivedVia",
+        "short_form": "derivedVia",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 43,
+      "kind": "R",
+      "namespace": "lifecycle",
+      "label": "supersedes",
+      "cid": "sha256:952e108ec48e06db1c072a7aa5af79af4f02404fabd32c9235a049fd6c54ae77",
+      "description": "Newer information replaces older assertion",
+      "category": "Lifecycle",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:lifecycle:supersedes",
+        "short_form": "supersedes",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 44,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "hasAttribute",
+      "cid": "sha256:58cd80c1514844bdfcc9b69a13b158c662d99f2199cbefed53e9ac65df456714",
+      "description": "entity has a property or field",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:hasAttribute",
+        "short_form": "hasAttribute",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 45,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "hasMethod",
+      "cid": "sha256:2cbd0c5e87c125d7da1d0acea7536aa2523e5517ac346faff94f2adff1dcf10e",
+      "description": "entity has an operation/function",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:hasMethod",
+        "short_form": "hasMethod",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 46,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "hasParameter",
+      "cid": "sha256:8be2b5ba5326edafa5ef9b95e4fb5220bbedd819c213dd642793ac8ece5bb376",
+      "description": "method/function parameter",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:hasParameter",
+        "short_form": "hasParameter",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 47,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "subClassOf",
+      "cid": "sha256:238ef53dbe332cf068c043e350c65734d495768fc867131317e97adb6c41dc9d",
+      "description": "specialization (inheritance)",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:subClassOf",
+        "short_form": "subClassOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 48,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "instanceOf",
+      "cid": "sha256:a251fbddf6d393eb6cd8d770e96d082535b1dd092e7bdd8a728160bd3f0d7d81",
+      "description": "specific instance of type",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:instanceOf",
+        "short_form": "instanceOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 49,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "associatedWith",
+      "cid": "sha256:d63916f7db54a69cd0547355da371e82beff0febae3b193f989e1c16c4aac00c",
+      "description": "general association",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:associatedWith",
+        "short_form": "associatedWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 50,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "composedOf",
+      "cid": "sha256:6c12c9e79f665acfb71f97fb2a2fffbcbf5514908de6b40a2662e6a81c6a3c73",
+      "description": "strong whole-part relationship",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:composedOf",
+        "short_form": "composedOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 51,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "aggregatedOf",
+      "cid": "sha256:f977e77c108491f7852bc01aa0533bbeb6a152f48152bfe88df64de75ac503b4",
+      "description": "weaker whole-part relationship",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:aggregatedOf",
+        "short_form": "aggregatedOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 52,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "implements",
+      "cid": "sha256:c285c21cbec73f0c7bad932d06c2d0d82753a72258f84905d75a7f67b99767af",
+      "description": "class realizes interface",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:implements",
+        "short_form": "implements",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 53,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "hasCardinality",
+      "cid": "sha256:12134be89125163349281c47dcfd08cd51c227ff127f8fa0e36e823f5c3958e2",
+      "description": "relationship cardinality",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:hasCardinality",
+        "short_form": "hasCardinality",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 54,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "dependsOn",
+      "cid": "sha256:1d8f2bec1e67d4713d4401433b2447d9843acbfda0578c3e5552c61624de6bd9",
+      "description": "requires another element",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:dependsOn",
+        "short_form": "dependsOn",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 55,
+      "kind": "R",
+      "namespace": "structural",
+      "label": "deployedOn",
+      "cid": "sha256:cea7ab8512a4c17581889152da9deabcd1ca50b6a1d2581cc68c5371d44e9b4e",
+      "description": "artifact deployed to environment",
+      "category": "Structural Modeling",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:structural:deployedOn",
+        "short_form": "deployedOn",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 56,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "calls",
+      "cid": "sha256:e9540d19b7f47d416ecb1963a31c66b49aa75a544ef38389c222164ceb337b08",
+      "description": "invokes another method",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:calls",
+        "short_form": "calls",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 57,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "triggers",
+      "cid": "sha256:15b1e8a3d1050df147367b7aa331931a83a3aba4cfc310d16dbbade456fa0eb0",
+      "description": "causes transition/action",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:triggers",
+        "short_form": "triggers",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 58,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "transitionsTo",
+      "cid": "sha256:aef42f1103cc853db62304dbb439c6420ef7892ed90141d6855ae8574e5fcac0",
+      "description": "state changes to another",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:transitionsTo",
+        "short_form": "transitionsTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 59,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "sendsMessage",
+      "cid": "sha256:15f3af25c382ec51842b70a359b648893470a2aa14e389a4ebaccadc0a3b1414",
+      "description": "sends message/signal",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:sendsMessage",
+        "short_form": "sendsMessage",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 60,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "hasGuardCondition",
+      "cid": "sha256:65f8805b5a68f47095357c2f660bd9fd525682241421c8b0c0e26e2b9a63a804",
+      "description": "condition guarding transition",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:hasGuardCondition",
+        "short_form": "hasGuardCondition",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 61,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "inputs",
+      "cid": "sha256:47cfe5ef9562cd2ecf6a8b3328c5467407716ddbfd69a1c0b85808f6cb92b3c5",
+      "description": "action consumes data",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:inputs",
+        "short_form": "inputs",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 62,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "outputs",
+      "cid": "sha256:bc6efb381267be66266ac7ac643c422a6dadebedbc85958560877a141bb44a57",
+      "description": "action produces data",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:outputs",
+        "short_form": "outputs",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 63,
+      "kind": "R",
+      "namespace": "behavior",
+      "label": "precedes",
+      "cid": "sha256:60d2b678e5f1f91f946b5e52ba97b2f09f031d25849e75288b3f01dbcbca63d3",
+      "description": "occurs before another",
+      "category": "Behavioral",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:behavior:precedes",
+        "short_form": "precedes",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 64,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "equivalentTo",
+      "cid": "sha256:92642dfe524c2a37be9be7cbc953378ae3ed9b3e618095624a470e09936a499d",
+      "description": "entities have same meaning",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:equivalentTo",
+        "short_form": "equivalentTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 65,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "disjointWith",
+      "cid": "sha256:76a74aa5a6858f962e916a1d804b59306fd214c839c90435e6e459eee4a06190",
+      "description": "entities cannot overlap",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:disjointWith",
+        "short_form": "disjointWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 66,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "inverseOf",
+      "cid": "sha256:f6df2bd4d98e42fe4fd86d2870ab2af10ce4b9f8062295237e7575027c34ffea",
+      "description": "reverse of another relation",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:inverseOf",
+        "short_form": "inverseOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 67,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "hasDomain",
+      "cid": "sha256:55e2e919b073832062832422b26feacb1df0e9b412b45d42545ab995a4128523",
+      "description": "predicate domain",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:hasDomain",
+        "short_form": "hasDomain",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 68,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "hasRange",
+      "cid": "sha256:08ebc1220f820ff69669e657bc52089077731aa0b8ceed0597ab9ec67f94d4e8",
+      "description": "predicate range",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:hasRange",
+        "short_form": "hasRange",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 69,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "subPropertyOf",
+      "cid": "sha256:21feaba2b476b8ec16d88c55d906ac11bfd7c311e9aa662cd15a4cb88e6a3c7f",
+      "description": "specialization of property",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:subPropertyOf",
+        "short_form": "subPropertyOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 70,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "partOf",
+      "cid": "sha256:165a124cd960704f0bb81c1211e8a21aac043e57c6a1d2b822facf48b32405ba",
+      "description": "general part-whole",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:partOf",
+        "short_form": "partOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 71,
+      "kind": "R",
+      "namespace": "ontological",
+      "label": "sameAs",
+      "cid": "sha256:448366b449e5dc9c664bfa23bd01c52d3efc645efb7a8ce9fc215fce721ee9b1",
+      "description": "identifiers denote same",
+      "category": "Ontological",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:ontological:sameAs",
+        "short_form": "sameAs",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 72,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "occursAt",
+      "cid": "sha256:e409214f5336da352b27af885d1b60a2f4964388f8bb6f251bf7ba85db06ecb0",
+      "description": "event occurs at time",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:occursAt",
+        "short_form": "occursAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 73,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "hasStartTime",
+      "cid": "sha256:ded67ba7fdd8736b4d94f6fde61e0c63f6d3d56b6eecfcdf92a26ed9f552dccd",
+      "description": "event start time",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:hasStartTime",
+        "short_form": "hasStartTime",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 74,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "hasEndTime",
+      "cid": "sha256:50c49e0d8a9f8067d3fbc1e8efcaffce6646b99ae4f1d2c8023b6792cb2fe6d6",
+      "description": "event end time",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:hasEndTime",
+        "short_form": "hasEndTime",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 75,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "hasDuration",
+      "cid": "sha256:5f0e16f61ebc86de3dd94602f34422efcdafb194491b0eecfd75d6c5996e418a",
+      "description": "event/process duration",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:hasDuration",
+        "short_form": "hasDuration",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 76,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "before",
+      "cid": "sha256:11aef029e696ac14816a98e3dcd9a6c1551760df708782e47e2de1aee6741098",
+      "description": "event before another",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:before",
+        "short_form": "before",
+        "aliases": [],
+        "notes": "inverseOf: R:temporal:after (explicit inverse removed for optimization)",
+        "inverse_label": "R:temporal:after"
+      }
+    },
+    {
+      "id": 78,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "during",
+      "cid": "sha256:89053e351a4dea0ed31e804f553a4b9f3d2e3a294cf910b0d57674c3d5a7afc9",
+      "description": "occurs within another",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:during",
+        "short_form": "during",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 79,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "overlapsWith",
+      "cid": "sha256:05ad562c8cd719574666c0b610f4c29bad4dbe7d346371a452dccc3970e9acd4",
+      "description": "temporal overlap",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:overlapsWith",
+        "short_form": "overlapsWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 80,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "hasRecurrence",
+      "cid": "sha256:60369278b00c05440a513c45aa5b3dd476948055c2fe8a9ae2670b97be501fee",
+      "description": "recurrence pattern",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:hasRecurrence",
+        "short_form": "hasRecurrence",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 81,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "hasTimestamp",
+      "cid": "sha256:c1dbb566fa94c7153718ddd133e47c99ef72fbf30e3cd5765ad4cd3d9b9e5a35",
+      "description": "timestamp of claim/post",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:hasTimestamp",
+        "short_form": "hasTimestamp",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 82,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "effectiveFrom",
+      "cid": "sha256:e731b557b06eb9749fae3f67f88806355b61b8b0c2125431ce63bb789b327431",
+      "description": "When this information becomes valid",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:effectiveFrom",
+        "short_form": "effectiveFrom",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 83,
+      "kind": "R",
+      "namespace": "temporal",
+      "label": "effectiveUntil",
+      "cid": "sha256:6957737565c8e8824e88d246217fa4b91265e4ead575952cda715c8f99987eef",
+      "description": "When this information expires",
+      "category": "Temporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": false,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:temporal:effectiveUntil",
+        "short_form": "effectiveUntil",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 84,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "locatedAt",
+      "cid": "sha256:362941bb28c7c36b844131a9dc0f441dc867e0060382d3e647da77192f17f167",
+      "description": "entity at specific location",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:locatedAt",
+        "short_form": "locatedAt",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 85,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "hasCoordinates",
+      "cid": "sha256:b17d27d6481242d3f7fabe3a9dc9b7dce9b9f2604dfbf84efad79ceb45be2f3e",
+      "description": "lat/long",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:hasCoordinates",
+        "short_form": "hasCoordinates",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 87,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "contains",
+      "cid": "sha256:9709e2e7f84de6918c86651f6380c8b2436fb854b47c81727330eb13d3724bc2",
+      "description": "contains entity",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:contains",
+        "short_form": "contains",
+        "aliases": [],
+        "notes": "inverseOf: R:spatial:within (explicit inverse removed for optimization)",
+        "inverse_label": "R:spatial:within"
+      }
+    },
+    {
+      "id": 88,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "adjacentTo",
+      "cid": "sha256:2364d0763b5ce87f6704e87069aace73043f3d7a2d410a9031c0497a5b1397a2",
+      "description": "next to/bordering",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:adjacentTo",
+        "short_form": "adjacentTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 89,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "near",
+      "cid": "sha256:b3a8a50f7f6827a1bef6102af52b03d6ee91c18d9ab0e36f80c95d51d6ebb573",
+      "description": "nearby",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:near",
+        "short_form": "near",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 90,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "hasAddress",
+      "cid": "sha256:3d8e2f3887450599c41286c78b06785a0e762a4c4fd57e14e027b7159a90d83c",
+      "description": "postal/civic address",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:hasAddress",
+        "short_form": "hasAddress",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 91,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "hasPath",
+      "cid": "sha256:9a9a659362dda2f2a2c2f4aa5490634c2e12680bed54fd3e62a70d2525fcebb4",
+      "description": "spatial path",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:hasPath",
+        "short_form": "hasPath",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 92,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "origin",
+      "cid": "sha256:97c32fc195f06202b824c2c381e1172e2d6676de62c76fcad5b2f8ca2f349b54",
+      "description": "starting point",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:origin",
+        "short_form": "origin",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 93,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "destination",
+      "cid": "sha256:d7124f2be727e6f3ade53ce6b50d5ea3f359dd4f9a0746c534135131a0186ccc",
+      "description": "end point",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:destination",
+        "short_form": "destination",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 94,
+      "kind": "R",
+      "namespace": "spatial",
+      "label": "direction",
+      "cid": "sha256:0eb0a55ff125c4026ef618662b235dd258c96d375030294af7143185c69a5c6d",
+      "description": "orientation",
+      "category": "Spatial",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatial:direction",
+        "short_form": "direction",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 95,
+      "kind": "R",
+      "namespace": "spatiotemporal",
+      "label": "trajectory",
+      "cid": "sha256:e0cd0b227ba54055c98284a91b69627ff845aa67cc730e5e78fef75f625dfa05",
+      "description": "spatial path over time",
+      "category": "Spatiotemporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatiotemporal:trajectory",
+        "short_form": "trajectory",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 96,
+      "kind": "R",
+      "namespace": "spatiotemporal",
+      "label": "velocity",
+      "cid": "sha256:2879417ebfcb58636680cf0a9867e612b31ae4d862f28af45f07ee5cad583e59",
+      "description": "speed and direction",
+      "category": "Spatiotemporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatiotemporal:velocity",
+        "short_form": "velocity",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 97,
+      "kind": "R",
+      "namespace": "spatiotemporal",
+      "label": "movementFromTo",
+      "cid": "sha256:a0636216ada52dd365dcec0543fa49cf82a208beffa34255493d8a166bb68a58",
+      "description": "movement event",
+      "category": "Spatiotemporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatiotemporal:movementFromTo",
+        "short_form": "movementFromTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 98,
+      "kind": "R",
+      "namespace": "spatiotemporal",
+      "label": "occupies",
+      "cid": "sha256:d91db4a6e8d5b2a1bc0d0382aab7c1196d8fe649f1be929b88c5b2e227774413",
+      "description": "presence at location/time",
+      "category": "Spatiotemporal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": true,
+      "spatial": true,
+      "sortable": true,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:spatiotemporal:occupies",
+        "short_form": "occupies",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 99,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "isProcess",
+      "cid": "sha256:096225629717873efcdb55502a8b0370b6fecee8fb2faf8cb0e6730432cbff4c",
+      "description": "entity is an ongoing process",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:isProcess",
+        "short_form": "isProcess",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 100,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "hasProcess",
+      "cid": "sha256:6cae0c3c843204023ea186e203370637951d33be69f35f8d38c48952254a1643",
+      "description": "involves a process",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:hasProcess",
+        "short_form": "hasProcess",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 101,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "participatesIn",
+      "cid": "sha256:13f47f0f0a7a0057f4e711954720289b38700785feb271a7f8e5eb6074ea69ea",
+      "description": "actor participates in process",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:participatesIn",
+        "short_form": "participatesIn",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 102,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "initiates",
+      "cid": "sha256:301f34a518a90a77d08ad14263ee8386d9692e11fd8b52203f5d0423b8b619ae",
+      "description": "agent starts process",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:initiates",
+        "short_form": "initiates",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 103,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "terminates",
+      "cid": "sha256:4631e65e3c4ab754dac66d3900e8ed553ce331087d4e73a56418981e1d6559fc",
+      "description": "agent ends process",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:terminates",
+        "short_form": "terminates",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 104,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "intendsTo",
+      "cid": "sha256:30a8afbc5917e8e8c0ad7a81f7c5e4e74f5f2ae35e2165a8fdd886ccfb58a8f7",
+      "description": "intention",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:intendsTo",
+        "short_form": "intendsTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 105,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "attempts",
+      "cid": "sha256:2a5319382b0ec2aab1295823da42f6800182b7efd0b0366e99d7c7c9b41cf9a6",
+      "description": "attempt (may fail)",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:attempts",
+        "short_form": "attempts",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 106,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "causes",
+      "cid": "sha256:cde6b1841b7c4947b2a4a54eb5a15d94e39b845fafac1b9244559c710421458d",
+      "description": "causes event",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:causes",
+        "short_form": "causes",
+        "aliases": [],
+        "notes": "inverseOf: R:agency:causedBy (explicit inverse removed for optimization)",
+        "inverse_label": "R:agency:causedBy"
+      }
+    },
+    {
+      "id": 108,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "resultedIn",
+      "cid": "sha256:13b4b75841904f2379a0d2664ce37f5b26eea7c48d852598ebcf2f0be36bbc18",
+      "description": "result of event",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:resultedIn",
+        "short_form": "resultedIn",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 109,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "enables",
+      "cid": "sha256:34cfb4c694e8bee84d5f7a3826d9596da567261915ec912a40073a44cf2c9601",
+      "description": "condition enables",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:enables",
+        "short_form": "enables",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 110,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "prevents",
+      "cid": "sha256:0e51a79823b947897c6e118d659f7be0570c6caf2abea1abc2141d8aca2cff8c",
+      "description": "condition prevents",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:prevents",
+        "short_form": "prevents",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 111,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "responsibleAgent",
+      "cid": "sha256:18ae1e1667a93282062164d4489c34086893329fbc840e7917b795fd882de628",
+      "description": "accountable participant",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:responsibleAgent",
+        "short_form": "responsibleAgent",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 112,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "hasGoal",
+      "cid": "sha256:cc0e0781be783c23ea26f9b5801b21e5f45736f96fc004cd2deae5098acf55ec",
+      "description": "entity has purpose",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:hasGoal",
+        "short_form": "hasGoal",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 113,
+      "kind": "R",
+      "namespace": "agency",
+      "label": "achieves",
+      "cid": "sha256:b373a857c5589984d115e0e3bf2a98b1015d5e682a40d245d5ffc8f579c00646",
+      "description": "action achieves goal",
+      "category": "Agency",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:agency:achieves",
+        "short_form": "achieves",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 114,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "likelyTrue",
+      "cid": "sha256:852aeff4ae7c822e032809e89be89af7b2f88d6dd728db919d2f3bcdc8934b08",
+      "description": "high probability",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:likelyTrue",
+        "short_form": "likelyTrue",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 115,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "possibly",
+      "cid": "sha256:1080d1df6680ebb7f5eac4999a19687e98445fc05ae30b577439daebb4c45b4b",
+      "description": "possibly true",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:possibly",
+        "short_form": "possibly",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 116,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "necessarily",
+      "cid": "sha256:7581a000190a05403741f41bf3afd4bda97bcecf37f11115eeed4714740a8b56",
+      "description": "must be true",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:necessarily",
+        "short_form": "necessarily",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 117,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "hasProbability",
+      "cid": "sha256:6afe33135f9c2f64de1acb27dc58c867b59185a3c4fd8b3f19a36b1c38adc6ec",
+      "description": "numerical probability",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:hasProbability",
+        "short_form": "hasProbability",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 118,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "hasConfidence",
+      "cid": "sha256:f627271570bd41e0be45c825fd1af526888544ff51bdf6d6dd2b5c59b9a85195",
+      "description": "confidence level",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:hasConfidence",
+        "short_form": "hasConfidence",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 119,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "hasUncertainty",
+      "cid": "sha256:83c6ef9406e1f421d83e093923dc624496e2a745a42f3877bb4c40539b2452d5",
+      "description": "uncertainty measure",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:hasUncertainty",
+        "short_form": "hasUncertainty",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 120,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "errorMargin",
+      "cid": "sha256:34d758347f272bc9a434a347bedea9ac362348b3b93bd35b78005d93fb74e63b",
+      "description": "measurement error margin",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:errorMargin",
+        "short_form": "errorMargin",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 121,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "confidenceInterval",
+      "cid": "sha256:bd2918dc4d84e546ee9a1f7455712d51412255eacf05672e7c81d8365831d81b",
+      "description": "statistical confidence interval",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:confidenceInterval",
+        "short_form": "confidenceInterval",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 122,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "measurementMethod",
+      "cid": "sha256:589af7e09070b482b54911d49750240c7fa9c921a547b138e0f7eac0e6e7b7ac",
+      "description": "how measured",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:measurementMethod",
+        "short_form": "measurementMethod",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 123,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "confidence",
+      "cid": "sha256:63fbec1ef9420b1636c009241c805047647bf9698cdf45b0cb92930a308eb6ef",
+      "description": "Confidence level (0.0-1.0)",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:confidence",
+        "short_form": "confidence",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 124,
+      "kind": "R",
+      "namespace": "uncertainty",
+      "label": "certaintyType",
+      "cid": "sha256:0446e6f16529aac0d3b943d68f56a3b84f4e5f87b9924b1603d19879dacde24d",
+      "description": "Type of uncertainty (random, systematic, etc.)",
+      "category": "Uncertainty",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:uncertainty:certaintyType",
+        "short_form": "certaintyType",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 125,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasMass",
+      "cid": "sha256:9d6927205ee5f7e47d1f0053b388f44f5df8d41a16f07cf9f4ca168a3bf1fc51",
+      "description": "physical mass",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasMass",
+        "short_form": "hasMass",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 126,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasVolume",
+      "cid": "sha256:72d6e0046079668f5961bd742279b4fcc72b1e7105cc2d6bf867e89d27354ef4",
+      "description": "physical volume",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasVolume",
+        "short_form": "hasVolume",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 127,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasColor",
+      "cid": "sha256:3f2d379e001d434041081a618a49e0c1d35e172a06b6e76837f145df6265837e",
+      "description": "physical color",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasColor",
+        "short_form": "hasColor",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 128,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasTemperature",
+      "cid": "sha256:4065c7bc3560c01358768e3c292b85342e83bf7445a937e39dfe1699890068ef",
+      "description": "temperature",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasTemperature",
+        "short_form": "hasTemperature",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 129,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasMaterial",
+      "cid": "sha256:4ed0a02c8516d2fcac6b642403d9fdaa67d8a5eb35b5d5c24f2f5e78fce4c551",
+      "description": "material composition",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasMaterial",
+        "short_form": "hasMaterial",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 130,
+      "kind": "R",
+      "namespace": "physical",
+      "label": "hasState",
+      "cid": "sha256:a8baa89546e62755da603d241fb5b42ff12388a24b6c9b4ddd4602f518e98235",
+      "description": "physical state (solid/liquid/gas)",
+      "category": "Physical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:physical:hasState",
+        "short_form": "hasState",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 131,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hasValue",
+      "cid": "sha256:a0340115c2f56257b7f3e83f72096fa9845806a0987d3c8ba1072a55a68be59f",
+      "description": "literal value",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hasValue",
+        "short_form": "hasValue",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 132,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hasUnit",
+      "cid": "sha256:d34db5a99f575d45fd6b696537d4bb8add4e8064d1393c5da08bd48fa0847b30",
+      "description": "unit of measure",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hasUnit",
+        "short_form": "hasUnit",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 133,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hasDataType",
+      "cid": "sha256:31ef40cb140d5ecc11b524b42ed8dc1d2fe3ded25b7eabcf436b08554f3dfb13",
+      "description": "literal data type",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hasDataType",
+        "short_form": "hasDataType",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 134,
+      "kind": "R",
+      "namespace": "data",
+      "label": "minValue",
+      "cid": "sha256:1a68ea37232a6001869bd590e388eb4e562980cb787f50addd1f15813c506c57",
+      "description": "minimum value",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:minValue",
+        "short_form": "minValue",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 135,
+      "kind": "R",
+      "namespace": "data",
+      "label": "maxValue",
+      "cid": "sha256:cbdc9aa6fd47c08f020915f5957650d027f65a7259890c9cfbbae0750c742107",
+      "description": "maximum value",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:maxValue",
+        "short_form": "maxValue",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 136,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hasPrecision",
+      "cid": "sha256:04b22e96fc2afb47e760c2ab78134c202ccf262dc140aad0a84e83ef10b0143f",
+      "description": "numerical precision",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hasPrecision",
+        "short_form": "hasPrecision",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 137,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hasHash",
+      "cid": "sha256:9f99cf8f6de4670f4ee8ae88c94e0c759a7da092769be5f68f0335a25f901bb7",
+      "description": "hash of content",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hasHash",
+        "short_form": "hasHash",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 138,
+      "kind": "R",
+      "namespace": "data",
+      "label": "contentAddressedBy",
+      "cid": "sha256:57e0b16b717322027c4a9b72c1decbccc1ec40d88edfb718727b8ac23b5f0a0f",
+      "description": "CID or hash pointer",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:contentAddressedBy",
+        "short_form": "contentAddressedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 139,
+      "kind": "R",
+      "namespace": "data",
+      "label": "canonicalizedAs",
+      "cid": "sha256:8c938e77bac02402a22d4ec247f1287000c237b26f70869faf05bbd4065ede81",
+      "description": "canonical form",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:canonicalizedAs",
+        "short_form": "canonicalizedAs",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 140,
+      "kind": "R",
+      "namespace": "data",
+      "label": "hashAlgorithm",
+      "cid": "sha256:e79dc6fafea8ff63d0b2f67d1e2ec7dbc1627febb840fe578cfbc83e0006eaff",
+      "description": "hash algorithm used",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:hashAlgorithm",
+        "short_form": "hashAlgorithm",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 141,
+      "kind": "R",
+      "namespace": "data",
+      "label": "canonicalizationMethod",
+      "cid": "sha256:624cc8be4ee132abdb2e0a6b10804f48b255c02ecdded1c6060fe147c440fd64",
+      "description": "method of canonicalization",
+      "category": "Data",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:data:canonicalizationMethod",
+        "short_form": "canonicalizationMethod",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 142,
+      "kind": "R",
+      "namespace": "security",
+      "label": "verifiedBy",
+      "cid": "sha256:1dccdf9f323aa12728f3360e27d6d36bd091411e5f697cbe378083243569bd83",
+      "description": "verified by source/method",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:verifiedBy",
+        "short_form": "verifiedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 143,
+      "kind": "R",
+      "namespace": "security",
+      "label": "trusts",
+      "cid": "sha256:f6cbd1ea602355526bbc584381152efa7a3e9b1bd6e92b8340190386fed478ea",
+      "description": "agent trusts entity",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:trusts",
+        "short_form": "trusts",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 144,
+      "kind": "R",
+      "namespace": "security",
+      "label": "hasProvenance",
+      "cid": "sha256:4e18cb2659a9bfdc2deb980838a910b3dfde58d7740d0ebf3941e686b0b3ec3a",
+      "description": "has provenance",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:hasProvenance",
+        "short_form": "hasProvenance",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 145,
+      "kind": "R",
+      "namespace": "security",
+      "label": "hasIntegrity",
+      "cid": "sha256:1419ebc3ded37f2e25fbb7a0f461db3d5382cd88da096797fe9752dc4faf153c",
+      "description": "integrity check",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:hasIntegrity",
+        "short_form": "hasIntegrity",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 146,
+      "kind": "R",
+      "namespace": "security",
+      "label": "hasAuthorization",
+      "cid": "sha256:e45c06b1bd2b318e654314bbb6e6f961a0fa6f7b69d6c5d4b356d4f57f4db0f4",
+      "description": "permission/authorization",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:hasAuthorization",
+        "short_form": "hasAuthorization",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 147,
+      "kind": "R",
+      "namespace": "security",
+      "label": "accessLevel",
+      "cid": "sha256:1af15ec1febe96d6220decf49db28af09fd1ecc66596bb6f61193559ef276f1b",
+      "description": "access level (public, private, restricted)",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:accessLevel",
+        "short_form": "accessLevel",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 148,
+      "kind": "R",
+      "namespace": "security",
+      "label": "visibility",
+      "cid": "sha256:c773446ff24ee0574c3f1ec88af615a165b94cecd0eb68462cc6ea2959782576",
+      "description": "visibility setting",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:visibility",
+        "short_form": "visibility",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 149,
+      "kind": "R",
+      "namespace": "security",
+      "label": "consentGiven",
+      "cid": "sha256:415bd83e4ab03c9ebf42b6320bec8180fd4c7946aa63a911b1eb635da41247d5",
+      "description": "consent provided",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:consentGiven",
+        "short_form": "consentGiven",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 150,
+      "kind": "R",
+      "namespace": "security",
+      "label": "consentRevoked",
+      "cid": "sha256:9369c88d3f823894be02a6187659713d07d423e1f95e770d0e5125a2f712e13c",
+      "description": "consent revoked",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:consentRevoked",
+        "short_form": "consentRevoked",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 151,
+      "kind": "R",
+      "namespace": "security",
+      "label": "redacted",
+      "cid": "sha256:cc6cdadea318c26bb711ef3a26a5ab015a8557d76716611470c2ed4e0200c02d",
+      "description": "content redacted",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:redacted",
+        "short_form": "redacted",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 152,
+      "kind": "R",
+      "namespace": "security",
+      "label": "masked",
+      "cid": "sha256:5a6bd1ed9be8b0aa8af3cffad0079731e816953928d1ade56742666d1a206fff",
+      "description": "content masked",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:masked",
+        "short_form": "masked",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 153,
+      "kind": "R",
+      "namespace": "security",
+      "label": "licenseUnder",
+      "cid": "sha256:100705bd20bbe0a8fa9071963dfe1e3a20078b218c6caf4bc6460e3c18a69ff0",
+      "description": "licensing of content",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:licenseUnder",
+        "short_form": "licenseUnder",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 154,
+      "kind": "R",
+      "namespace": "security",
+      "label": "termsOfUse",
+      "cid": "sha256:79d86ae5c1571142b08f733c4ca9ec599d545991c070941262ec61c62ec7cb2a",
+      "description": "usage terms",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:termsOfUse",
+        "short_form": "termsOfUse",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 155,
+      "kind": "R",
+      "namespace": "security",
+      "label": "compliesWith",
+      "cid": "sha256:769a7baac9b1c84e6c80f1a4e448f28e81f0021b04ae8086f5c90f79266234a6",
+      "description": "complies with policy",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:compliesWith",
+        "short_form": "compliesWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 156,
+      "kind": "R",
+      "namespace": "security",
+      "label": "violatesPolicy",
+      "cid": "sha256:739039801fdb4a844043eb915583ede932399fbef3702d7670f854204580c31d",
+      "description": "violates policy",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:violatesPolicy",
+        "short_form": "violatesPolicy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 157,
+      "kind": "R",
+      "namespace": "security",
+      "label": "verifiedBy",
+      "cid": "sha256:1dccdf9f323aa12728f3360e27d6d36bd091411e5f697cbe378083243569bd83",
+      "description": "Method/entity that verified this",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:verifiedBy",
+        "short_form": "verifiedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 158,
+      "kind": "R",
+      "namespace": "security",
+      "label": "accessLevel",
+      "cid": "sha256:1af15ec1febe96d6220decf49db28af09fd1ecc66596bb6f61193559ef276f1b",
+      "description": "Who can see this metadata",
+      "category": "Security",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:security:accessLevel",
+        "short_form": "accessLevel",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 159,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "taggedWith",
+      "cid": "sha256:ea34fc1cf0792847aff99737dc8f69c3f1b05724f47aa9f33a65caf8f65bad67",
+      "description": "tagged with keyword",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:taggedWith",
+        "short_form": "taggedWith",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 160,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "annotatedBy",
+      "cid": "sha256:a96a3c1e7753ea26e23babc25465cf1d8b576050d281d38bf7de862990f3575c",
+      "description": "annotated by actor",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:annotatedBy",
+        "short_form": "annotatedBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 161,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "confidenceSource",
+      "cid": "sha256:31ca5fb1428bf732ababb332240c97ea10ed656d3ed4b428f1d2eccfd2f2ac99",
+      "description": "source of confidence score",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:confidenceSource",
+        "short_form": "confidenceSource",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 162,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "languageOf",
+      "cid": "sha256:85011c94e86729f6ef1e0fea4da948370933e81d40a8dc74efdbb8cca159e695",
+      "description": "language of literal",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:languageOf",
+        "short_form": "languageOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 163,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "localizedAs",
+      "cid": "sha256:72bf9ecc486e6fc800882103f20df06716679d73fdc0f2acc4fceb5715b86921",
+      "description": "localized representation",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:localizedAs",
+        "short_form": "localizedAs",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 164,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "contextOf",
+      "cid": "sha256:0f6f6200867b157803815accb34896b61203999aca434672b62070cc4e16a54f",
+      "description": "discourse or context",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:contextOf",
+        "short_form": "contextOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 165,
+      "kind": "R",
+      "namespace": "metadata",
+      "label": "withinContext",
+      "cid": "sha256:abbcbe286889072b40ba4e647f41dfc000de717d31368c971c54015373067e99",
+      "description": "occurs within context",
+      "category": "Metadata",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:metadata:withinContext",
+        "short_form": "withinContext",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 166,
+      "kind": "R",
+      "namespace": "transactions",
+      "label": "transfers",
+      "cid": "sha256:26c26edbd5d0d277f992618526e084fdb7b704feb28e90785e21a3936b17de2e",
+      "description": "transfer of ownership/value",
+      "category": "Transactions",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:transactions:transfers",
+        "short_form": "transfers",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 167,
+      "kind": "R",
+      "namespace": "transactions",
+      "label": "paidBy",
+      "cid": "sha256:b2e8bbd4214b4dcb9e16cfb23197236e352acab30d5362ad4423db7e1c017102",
+      "description": "paid by agent",
+      "category": "Transactions",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:transactions:paidBy",
+        "short_form": "paidBy",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 168,
+      "kind": "R",
+      "namespace": "transactions",
+      "label": "priceOf",
+      "cid": "sha256:834e6606b699fd9cf0c2a5a220a3e3516a4523e74382eb68e2588d4dc7c3ce08",
+      "description": "price of entity",
+      "category": "Transactions",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:transactions:priceOf",
+        "short_form": "priceOf",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 169,
+      "kind": "R",
+      "namespace": "transactions",
+      "label": "ownsTitleTo",
+      "cid": "sha256:b89f6e55d40d9b69c6b0483d8a2efa895a5c601374186bf3a82ea0be427182f8",
+      "description": "owns title/rights",
+      "category": "Transactions",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:transactions:ownsTitleTo",
+        "short_form": "ownsTitleTo",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 170,
+      "kind": "R",
+      "namespace": "social_knowledge",
+      "label": "knows",
+      "cid": "sha256:d7dcb829345cce1c39f530b09639d1855b7e6d545e76b29b8c519740afbc47ab",
+      "description": "agent knows fact/agent",
+      "category": "Social Knowledge",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social_knowledge:knows",
+        "short_form": "knows",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 171,
+      "kind": "R",
+      "namespace": "social_knowledge",
+      "label": "influences",
+      "cid": "sha256:4d4b504289266d27a705601f22460dc5b0846e854777f23647d2006513877553",
+      "description": "entity influences another",
+      "category": "Social Knowledge",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social_knowledge:influences",
+        "short_form": "influences",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 172,
+      "kind": "R",
+      "namespace": "provenance",
+      "label": "source",
+      "cid": "sha256:196e6fa89db9757de0e4704a1a31b4766573250b97ac44a216aa2b872fdc0f88",
+      "description": "Source of information (document, person, system)",
+      "category": "Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:provenance:source",
+        "short_form": "source",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 173,
+      "kind": "R",
+      "namespace": "provenance",
+      "label": "evidence",
+      "cid": "sha256:046313c05d13040e6cca74169374e02b342443f5ea99a46ae8f69fbcd932cb54",
+      "description": "Supporting evidence for assertion",
+      "category": "Provenance",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:provenance:evidence",
+        "short_form": "evidence",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 174,
+      "kind": "R",
+      "namespace": "legal",
+      "label": "legalBasis",
+      "cid": "sha256:630073f058e0c5e99136fc225ca4cff9ad7cfb789fbefaf447aeaf659ceaa67f",
+      "description": "Legal foundation (court order, contract, etc.)",
+      "category": "Legal",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:legal:legalBasis",
+        "short_form": "legalBasis",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 175,
+      "kind": "R",
+      "namespace": "context",
+      "label": "context",
+      "cid": "sha256:9137a2bf07e5abaf1287ea78dbaf5aaa534a1d3f22ad199939c8835326aac2e5",
+      "description": "Context where this assertion applies",
+      "category": "Context",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:context:context",
+        "short_form": "context",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 176,
+      "kind": "R",
+      "namespace": "logical",
+      "label": "assumption",
+      "cid": "sha256:f92020b5c11587636fa896f46ffcc33642f91cda861f41eb6d2eb92a79453a76",
+      "description": "Underlying assumption made",
+      "category": "Logical",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:logical:assumption",
+        "short_form": "assumption",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 177,
+      "kind": "R",
+      "namespace": "social",
+      "label": "hasSex",
+      "cid": "sha256:c3e73ec4a53e40e13ae0b34e265fd7048dd55e03d12f08074f6031542532ea9d",
+      "description": "sex or gender identity",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "single",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": false,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:hasSex",
+        "short_form": "hasSex",
+        "aliases": [],
+        "notes": ""
+      }
+    },
+    {
+      "id": 178,
+      "kind": "R",
+      "namespace": "social",
+      "label": "childOf",
+      "cid": "sha256:31149551bbf200ec61fecdf4aeb4c118cd64ca340b97a0322543aef49b52969e",
+      "description": "child of parent (biological, adoptive, etc.)",
+      "category": "Social",
+      "domain": {
+        "type": "entity",
+        "description": ""
+      },
+      "range": {
+        "type": "entity",
+        "description": ""
+      },
+      "cardinality": "multi",
+      "temporal": false,
+      "spatial": false,
+      "sortable": false,
+      "reversible": true,
+      "inverse_of": null,
+      "metadata": {
+        "canonical_label": "R:social:childOf",
+        "short_form": "childOf",
+        "aliases": [],
+        "notes": "inverseOf: R:social:parentOf (explicit inverse removed for optimization)",
+        "inverse_label": "R:social:parentOf"
+      }
+    }
+  ],
+  "inverse_pairs": [],
+  "missing_inverses": [],
+  "duplicate_candidates": [
+    {
+      "predicate_ids": [
+        142,
+        157
+      ],
+      "predicate_label": "verifiedBy",
+      "issue": "Same short name but different descriptions/scopes",
+      "resolution": "Clarify with namespace: R:security:verifiedBy vs R:metadata:verifiedBy"
+    }
+  ]
+}
