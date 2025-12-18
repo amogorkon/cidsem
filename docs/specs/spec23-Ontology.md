@@ -1,5 +1,71 @@
 # Ontology
 
+## Inverse Pair Documentation
+
+**Storage and Query Architecture:**
+
+CIDStore's inverse metadata system (`register_inverse(A, B)`) declares bidirectional inverse relationships between predicates. When both predicates in an inverse pair are registered as separate data structures (e.g., `owns` and `ownerOf`):
+
+- **Storage**: Each triple is stored twice (once per predicate with SPO/OSP/POS indices)
+- **Query routing**: Inverse queries on predicate A automatically route to predicate B's SPO index for efficient lookup
+- **Alternative**: For predicates with multivalue stores, OSP indices already enable inverse queries without separate predicates, but routing through the inverse predicate's SPO index is faster
+
+**Implementation**: The inverse registry maps predicate CIDs bidirectionally (`inverse_predicates: Dict[E, E]`) and provides query routing via `get_inverse(predicate)`.
+
+**Registered Inverse Pairs**:
+
+| Forward Predicate | ID  | Inverse Predicate | ID  | Notes                                    |
+|-------------------|-----|-------------------|-----|------------------------------------------|
+| follows           | 016 | followedBy        | 017 | Social graph relationship                |
+| owns              | 025 | ownerOf           | 026 | Asset ownership                          |
+| childOf           | 178 | parentOf          | 179 | Family/kinship hierarchy                 |
+| contains          | 087 | within            | 086 | Spatial containment                      |
+| before            | 076 | after             | 077 | Temporal ordering                        |
+| causes            | 106 | causedBy          | 107 | Causal relationship                      |
+| composedOf        | 050 | hasPart           | 180 | Component/whole relationship             |
+| dependsOn         | 054 | requiredBy        | 181 | Dependency relationship                  |
+| calls             | 056 | calledBy          | 182 | Function/method invocation               |
+| implements        | 052 | implementedBy     | 183 | Interface/implementation relationship    |
+| supports          | 014 | supportedBy       | 184 | Support/endorsement relationship         |
+| influences        | 171 | influencedBy      | 185 | Influence relationship                   |
+| knows             | 170 | knownBy           | 186 | Knowledge/awareness relationship         |
+
+**Duplicate Entries**:
+
+These predicates appear multiple times with different descriptions:
+- `verifiedBy`: ID 142 (Security), ID 157 (Security/method)
+- `accessLevel`: ID 147 (Security), ID 158 (Metadata visibility)
+
+Namespace qualifiers distinguish usage (e.g., `R:sec:verifiedBy` vs `R:meta:verifiedBy`).
+
+## Meta-Predicates for Ontology Relationships
+
+The Ontological category (IDs 064-071) includes meta-predicates that describe relationships **between predicates themselves**:
+
+| ID  | Predicate       | Purpose                                                                                      |
+|-----|-----------------|----------------------------------------------------------------------------------------------|
+| 066 | inverseOf       | Declare predicate A is the inverse of predicate B (e.g., `childOf inverseOf parentOf`)      |
+| 069 | implies         | Express logical implication (e.g., `greater implies greaterOrEqual`)                         |
+| 189 | specializes     | Semantic specialization - type to supertype (e.g., `seniorEngineer specializes engineer`)    |
+| 190 | isA             | Instance to type relationship (e.g., `Alice isA Person`)                                     |
+| 064 | equivalentTo    | Declare two predicates have identical semantics                                              |
+| 065 | disjointWith    | Declare two predicates cannot both be true for same (S,O) pair (¬(A ∧ B))                    |
+| 187 | negates         | Declare predicate A is the logical negation of predicate B (e.g., `alive negates dead`)     |
+| 188 | or              | Declare at least one predicate must be true for validity (A ∨ B) (e.g., `email or phone`)   |
+
+**Implementation Status:** These predicates are defined in the ontology vocabulary but CIDStore does not yet interpret them at runtime. The inverse registry uses code-based registration (`register_inverse(A, B)`) rather than data-driven `inverseOf` triples. Applications can store meta-predicate triples and implement their own reasoning logic.
+
+**Example Usage:**
+- `(R:social:childOf, inverseOf, R:social:parentOf)` - document inverse relationship
+- `(R:role:seniorEngineer, specializes, R:role:engineer)` - type specialization
+- `(E:person:Alice, isA, E:type:Person)` - instance to type
+- `(R:social:married, equivalentTo, R:social:spouse)` - declare equivalence
+- `(R:temp:before, disjointWith, R:temp:after)` - declare mutual exclusion
+- `(R:status:alive, negates, R:status:dead)` - declare logical negation
+- `(R:contact:email, or, R:contact:phone)` - declare disjunction (at least one must exist)
+
+---
+
 | ID  | Short Name        | Description                                           | Category                |
 |-----|-------------------|-------------------------------------------------------|-------------------------|
 | 001 | posted            | user posted message (system; symbolic)                | Social                  |
@@ -70,7 +136,7 @@
 | 066 | inverseOf         | reverse of another relation                           | Ontological            |
 | 067 | hasDomain         | predicate domain                                      | Ontological            |
 | 068 | hasRange          | predicate range                                       | Ontological            |
-| 069 | subPropertyOf     | specialization of property                            | Ontological            |
+| 069 | implies           | subsumption/implication relationship                  | Ontological            |
 | 070 | partOf            | general part-whole                                    | Ontological            |
 | 071 | sameAs            | identifiers denote same                               | Ontological            |
 | 072 | occursAt          | event occurs at time                                  | Temporal               |
@@ -181,6 +247,17 @@
 |177 | hasSex            | sex or gender identity                                | Social                 |
 |178 | childOf           | child of parent (biological, adoptive, etc.)          | Social                 |
 |179 | parentOf          | parent of child (biological, adoptive, etc.)          | Social                 |
+|180 | hasPart           | inverse of composedOf (contains component)            | Structural Modeling    |
+|181 | requiredBy        | inverse of dependsOn (is required by)                 | Structural Modeling    |
+|182 | calledBy          | inverse of calls (is called by)                       | Structural Modeling    |
+|183 | implementedBy     | inverse of implements (is implemented by)             | Structural Modeling    |
+|184 | supportedBy       | inverse of supports (is supported by)                 | Social                 |
+|185 | influencedBy      | inverse of influences (is influenced by)              | Social Knowledge       |
+|186 | knownBy           | inverse of knows (is known by)                        | Social Knowledge       |
+|187 | negates           | logical negation relationship between predicates      | Ontological            |
+|188 | or                | disjunction relationship between predicates           | Ontological            |
+|189 | specializes       | semantic specialization within domain                 | Ontological            |
+|190 | isA               | instance-to-type relationship                         | Ontological            |
 
 ## Label format enforcement
 
